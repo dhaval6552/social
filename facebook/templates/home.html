@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+<h1>Welocome {{user}}</h1>
+<h2>Here your friends list</h2>
+<a href="/edit_profile">edit profile</a>
+{% for usr in user_all %}
+{% if user_all != usr %}
+<h3><a href="/{{usr.id}}">{{usr}}</a>  Add as a friend</h3>
+{% endif %}
+{% endfor %}
